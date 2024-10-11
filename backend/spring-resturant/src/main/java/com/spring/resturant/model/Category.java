@@ -2,8 +2,6 @@ package com.spring.resturant.model;
 
 import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
@@ -20,9 +18,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Category extends CategoryOrder{
 	
-	@JsonIgnore
 	@OneToMany(mappedBy = "category")
-	
 	private Set<Order> orders;
 	
 

@@ -1,7 +1,5 @@
 package com.spring.resturant.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Lob;
@@ -24,7 +22,6 @@ public class Order extends CategoryOrder{
 	private String description;
 	private int price;
 	
-	@JsonIgnore
 	@ManyToOne()
 	@JoinColumn(name="id_category")
 	private Category category;
